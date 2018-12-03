@@ -175,6 +175,7 @@ public class SwaggerAutoConfiguration implements BeanFactoryAware {
             Docket docketForBuilder = new Docket(DocumentationType.SWAGGER_2)
                     .host(swaggerProperties.getHost())
                     .apiInfo(apiInfo)
+                    .consumes(docketInfo.getConsumes())
                     .securitySchemes(Collections.singletonList(apiKey()))
                     .securityContexts(Collections.singletonList(securityContext()))
                     .globalOperationParameters(assemblyGlobalOperationParameters(swaggerProperties.getGlobalOperationParameters(),

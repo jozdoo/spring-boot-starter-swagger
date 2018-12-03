@@ -12,6 +12,8 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import static com.google.common.collect.Sets.newHashSet;
 
 /**
  * @author 翟永超
@@ -189,6 +191,8 @@ public class SwaggerProperties {
          * 忽略的参数类型
          **/
         private List<Class<?>> ignoredParameterTypes = new ArrayList<>();
+
+        private Set<String> consumes = newHashSet();
 
     }
 
